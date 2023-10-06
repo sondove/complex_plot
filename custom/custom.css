@@ -1,0 +1,33 @@
+/*
+ * This is a novem custom visualization
+ *
+ * Here you may write some custom css that will be injected into the plot
+ * 
+ * The default render target is `#target`, global variables are passed down
+ * on the `:root` element, read more here:
+ *
+ * https://novem.no/docs/plot/custom/#styling
+ * 
+ **/
+
+/* style observable axis */
+[aria-label="text"] text ,
+[aria-label="y-axis tick label"] text ,
+[aria-label="x-axis tick label"] text {
+  font-size: calc(12px * var(--novem-render-frac));
+}
+
+#target figure > div {
+  /* Center legend */
+  justify-content: center;
+}
+
+/* set dark and light mode background colors */
+#target {
+  background: #ffffff;
+}
+
+[data-dark-mode] #target {
+  background: #212121;
+}
+
